@@ -23,7 +23,6 @@ import java.util.stream.Collectors;
 @Component
 public class OrderService {
 
-
     //没有增加static导致调用是orderHandleMap为空
     private static  Map<OrderHandlerType, OrderHandler> orderHandleMap;
 
