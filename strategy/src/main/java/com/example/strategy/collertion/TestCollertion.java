@@ -20,4 +20,39 @@ public class TestCollertion {
         OrderService orderService=new OrderService();
         orderService.orderService(order);
     }
+
+
+    public static void main(String[] args) {
+        int n=5;
+        System.out.println(firstBadVersion(n));
+
+    }
+
+
+    public static int firstBadVersion(int n) {
+        int left=1;
+        int right=n;
+        while (left<right){
+            int middle=left+(right-left)/2;
+            if(isBadVersion(middle)){
+                right=middle;
+            }else {
+                left=middle+1;
+            }
+        }
+        return right;
+    }
+
+
+
+    public static boolean isBadVersion(int version){
+        if(version>3){
+            return true;
+        }
+
+        return false;
+    }
+
+
 }
+
